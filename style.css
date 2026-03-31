@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #A9A9A9 0%, #808080 100%);
+    color: #2c3e50;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #4B0082, #6A5ACD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+header p {
+    font-size: 1.2rem;
+    color: #4682B4;
+}
+.controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+#xlsxFile {
+    padding: 12px 20px;
+    border: 2px solid #B0E0E6;
+    border-radius: 8px;
+    background: white;
+    font-size: 1rem;
+}
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+#loadBtn {
+    background: linear-gradient(45deg, #228B22, #90EE90);
+    color: white;
+}
+#loadBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(34,139,34,0.4);
+}
+#downloadTemplateBtn {
+    background: linear-gradient(45deg, #483D8B, #9370DB);
+    color: white;
+}
+#downloadTemplateBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(75,0,130,0.4);
+}
+
+.status {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px;
+}
+.metrics-container {
+    min-height: 300px;
+}
+
+.status.balanced {
+    color: #228B22;
+}
+.status.unbalanced {
+    color: #DC143C;
+}
+
+.kpi-grid {
+    background: rgba(255,255,255,0.95);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.kpi-grid table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.kpi-grid th, .kpi-grid td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.kpi-grid th {
+    background: linear-gradient(45deg, #B0E0E6, #87CEEB);
+    font-weight: bold;
+}
+
+
+.kpi-grid .good {
+    color: #228B22;
+    font-weight: bold;
+}
+
+.kpi-grid .evo-good {
+    color: #228B22;
+    font-weight: bold;
+}
+
+.kpi-grid .bad {
+    color: #DC143C;
+    font-weight: bold;
+}
+
+.kpi-grid .evo-bad {
+    color: #DC143C;
+    font-weight: bold;
+}
+
+/* Modal popup styles */
+.modal table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+.modal table th, .modal table td {
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+.modal table th {
+    background: linear-gradient(45deg, #B0E0E6, #87CEEB);
+    font-weight: bold;
+    color: #2c3e50;
+}
+.modal .good {
+    color: #228B22;
+    font-weight: bold;
+}
+.modal .bad {
+    color: #DC143C;
+    font-weight: bold;
+}
+
+.column {
+    background: rgba(255,255,255,0.95);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+}
+.column h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 3px solid #B0E0E6;
+    padding-bottom: 10px;
+}
+.left h2 {
+    background: linear-gradient(45deg, #228B22, #32CD32);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.right h2 {
+    background: linear-gradient(45deg, #483D8B, #6A5ACD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background: linear-gradient(45deg, #B0E0E6, #87CEEB);
+    color: #2c3e50;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+tr:nth-child(even) {
+    background: rgba(176,224,230,0.3);
+}
+tr:hover {
+    background: rgba(144,238,144,0.2);
+}
+.section-header {
+    font-weight: bold;
+    background: linear-gradient(90deg, #F0F8FF, #E6F3FF);
+    border-left: 5px solid #228B22;
+    padding-left: 20px !important;
+}
+
+.subtotal {
+    font-weight: bold;
+    background: linear-gradient(90deg, #90EE90, #98FB98);
+    border-top: 2px solid #228B22;
+}
+
+
+
+.green-subtotal {
+    background: rgba(255, 0, 0, 0.9) !important;
+    color: white !important;
+}
+
+.equity-total {
+    background: rgba(255, 165, 0, 0.9) !important;
+    color: white !important;
+}
+
+
+
+.total {
+    font-size: 1.3rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #228B22, #32CD32) !important;
+    color: white !important;
+    border-top: 3px solid #006400;
+}
+tfoot td {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+@media (max-width: 1024px) {
+    .balance-sheet {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .column {
+        padding: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #xlsxFile, button {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}
